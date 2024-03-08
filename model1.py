@@ -12,14 +12,14 @@ import os
 import requests
 import joblib
 
-#model_url='https://raw.githubusercontent.com/ManasiBhavsar/House-Price-Prediction/main/finalized_model.sav'
-#r=requests.get(model_url)
+model_url='https://github.com/PatilAshwini1009/house-price-prediction/blob/main/finalized_model.sav'
+r=requests.get(model_url)
 
-#if r.status_code==200:
- #   with open('finalized_model.sav','wb') as f:
-  #      f.write(r.content)
-#else:
-   # print("Failed to download the model file")
+if r.status_code==200:
+    with open('finalized_model.sav','wb') as f:
+        f.write(r.content)
+else:
+    print("Failed to download the model file")
     
 model = pickle.load(open(r"C:\Users\Ashwini\Downloads\finalized_model.sav", 'rb'))
 
