@@ -21,7 +21,7 @@ if r.status_code==200:
 else:
     print("Failed to download the model file")
     
-model = pickle.load(open(r"C:\Users\Ashwini\Downloads\finalized_model.sav", 'rb'))
+model = joblib.load("finalized_model.sav")
 
 
 def predict_price(input_data):
